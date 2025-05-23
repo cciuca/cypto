@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cryptick</string>
+    
+    <!-- Navigation -->
+    <string name="title_discover">Descubrir</string>
+    <string name="title_favorites">Favoritos</string>
+    <string name="title_profile">Perfil</string>
+    <string name="title_calculator">Calculadora</string>
+
+    <!-- Discover Fragment -->
+    <string name="top_cryptos">Top criptos por capitalización</string>
+    <string name="refresh">Actualizar</string>
+
+    <!-- Favorites Fragment -->
+    <string name="favorite_cryptos">Criptos favoritas</string>
+    <string name="no_favorites">Aún no hay criptos favoritas</string>
+
+    <!-- Profile Fragment -->
+    <string name="general_settings">Ajustes Generales</string>
+    <string name="dark_mode">Modo Oscuro</string>
+    <string name="language">Idioma</string>
+    <string name="information">Información</string>
+    <string name="about_app">Acerca de la App</string>
+    <string name="terms_conditions">Términos y Condiciones</string>
+    <string name="privacy_policy">Política de Privacidad</string>
+    <string name="share_app">Compartir App</string>
+    <string name="logout">CERRAR SESIÓN</string>
+    <string name="logout_confirmation">¿Estás seguro de que quieres cerrar sesión?</string>
+    <string name="cancel">Cancelar</string>
+    <string name="share_message">¡Descubre Cryptick, la mejor app de seguimiento de criptomonedas!</string>
+    <string name="select_language">Seleccionar Idioma</string>
+    <string name="english">English</string>
+    <string name="spanish">Español</string>
+    <string name="virtual_agent">Mi Agente</string>
+    <string name="coming_soon">Próximamente: Tu asistente virtual de inversión</string>
+    <string name="ask_agent">Preguntar al agente</string>
+    <string name="type_message">Escribe tu pregunta sobre inversión…</string>
+    <string name="send">Enviar</string>
+    <string name="agent_welcome">¡Hola! Soy tu asistente virtual de inversión. ¿En qué puedo ayudarte?</string>
+    <string name="agent_thinking">Pensando…</string>
+
+    <!-- About Dialog -->
+    <string name="project_module">Módulo de Proyecto</string>
+    <string name="developer_name">Christian Ciuca\nArangoya</string>
+    <string name="about_title">Acerca de</string>
+    <string name="about_description">Esta aplicación es el módulo de proyecto final del grado de DAM. Es una mezcla e implementación práctica de todo lo aprendido a lo largo del curso, destinada a demostrar las competencias del estudiante.</string>
+    <string name="main_technologies">Tecnologías principales</string>
+    <string name="close">Cerrar</string>
+
+    <!-- Terms and Conditions -->
+    <string name="terms_last_updated">Última actualización: [Fecha]</string>
+    <string name="terms_content">¡Bienvenido a Cryptick! Esta aplicación fue desarrollada como parte del proyecto final del grado de DAM (Desarrollo de Aplicaciones Multiplataforma).\n\n
+1. Introducción\nPor favor, lee estos Términos y Condiciones cuidadosamente antes de usar la aplicación.\n\n
+2. Propósito Educativo\nCryptick es un proyecto estudiantil desarrollado con fines educativos. Demuestra la implementación práctica de las tecnologías aprendidas durante el curso y no está destinado para uso comercial o distribución.\n\n
+3. Datos de Usuario\nCryptick puede recopilar y almacenar ciertos datos proporcionados por los usuarios a través de Firebase y otros servicios de terceros. Al usar esta aplicación, aceptas el uso de la información de acuerdo con estos términos.\n\n
+4. Propiedad Intelectual\nTodo el contenido, incluyendo código y diseño, es propiedad intelectual de Christian Ciuca Arangoya, a menos que se indique lo contrario. El uso de bibliotecas o frameworks de terceros está sujeto a sus respectivas licencias.\n\n
+5. Limitación de Responsabilidad\nCryptick se proporciona "TAL CUAL" sin garantías de ningún tipo. El desarrollador no es responsable de ninguna pérdida o daño resultante del uso o la imposibilidad de usar la aplicación.\n\n
+6. Contacto\nPara cualquier pregunta o inquietud sobre estos términos, por favor contacta: [Inserta tu dirección de correo electrónico u otra información de contacto].\n\n
+7. Cambios\nEstos Términos y Condiciones pueden actualizarse en el futuro. Los cambios se comunicarán dentro de la aplicación a través de los canales apropiados.</string>
+
+    <!-- Privacy Policy -->
+    <string name="privacy_last_updated">Última actualización: [Fecha]</string>
+    <string name="privacy_content">Esta Política de Privacidad describe cómo Cryptick recopila, utiliza y protege tu información cuando usas la aplicación.\n\n
+1. Propósito de la Aplicación\nCryptick es una aplicación móvil desarrollada como proyecto final del grado de DAM (Desarrollo de Aplicaciones Multiplataforma). Está diseñada únicamente con fines educativos y de demostración.\n\n
+2. Información que Recopilamos\nCryptick puede recopilar los siguientes tipos de información:\n\n
+Datos Personales (si aplica): como tu correo electrónico o nombre de usuario si inicias sesión usando Firebase Authentication.\n\n
+Datos de Uso: como la fecha y hora de tu actividad en la aplicación.\n\n
+Información del Dispositivo: como el tipo de dispositivo o versión del sistema operativo (recopilado de forma anónima a través de Firebase).\n\n
+Esta información se utiliza únicamente para proporcionar las funcionalidades básicas de la aplicación.\n\n
+3. Cómo Utilizamos tu Información\nCualquier dato recopilado se utiliza únicamente para:\n\n
+• Habilitar funciones básicas de la aplicación (por ejemplo, autenticación, almacenamiento de usuario).\n\n
+• Mejorar la fiabilidad y el rendimiento de la aplicación.\n\n
+• Depurar o solucionar problemas durante el desarrollo.\n\n
+Tus datos no se venden, comparten ni utilizan con fines de marketing.\n\n
+4. Servicios de Terceros\nCryptick utiliza Firebase de Google para servicios de autenticación y base de datos. Firebase puede recopilar información según se describe en su política de privacidad.\n\n
+5. Seguridad de Datos\nNos comprometemos a mantener tus datos seguros. Si bien este es un proyecto estudiantil y no una aplicación de producción, se realizan todos los esfuerzos razonables para seguir prácticas seguras utilizando los servicios de Firebase.\n\n
+6. Privacidad de los Niños\nCryptick no está destinada a niños menores de 13 años. No se recopilan datos de niños a sabiendas.\n\n
+7. Cambios en esta Política\nEsta Política de Privacidad puede actualizarse de vez en cuando. Si se realizan cambios, se reflejarán en este documento con una fecha de "última actualización" actualizada.\n\n
+8. Contacto\nSi tienes alguna pregunta sobre esta Política de Privacidad, por favor contacta: ciucaandreic@gmail.com</string>
+
+    <!-- Coin Details Dialog -->
+    <string name="market_cap">Capitalización de Mercado</string>
+    <string name="market_cap_rank">Ranking de Capitalización</string>
+    <string name="volume_24h">Volumen 24h</string>
+    <string name="high_24h">Máximo 24h</string>
+    <string name="low_24h">Mínimo 24h</string>
+    <string name="circulating_supply">Suministro Circulante</string>
+    <string name="max_supply">Suministro Máximo</string>
+    <string name="all_time_high">Máximo Histórico</string>
+    <string name="all_time_low">Mínimo Histórico</string>
+    
+    <!-- Coin Details Dialog Sections -->
+    <string name="market_information">Información de Mercado</string>
+    <string name="price_range_24h">Rango de Precio (24h)</string>
+    <string name="supply_information">Información de Suministro</string>
+    <string name="historical_records">Registros Históricos</string>
+    <string name="of_max_supply">%1$d%% del suministro máximo</string>
+    
+    <string name="search_hint">Buscar criptomonedas...</string>
+    
+    <!-- Calculator Fragment -->
+    <string name="calculator_title">Conversor de Criptomonedas</string>
+    <string name="calculator_subtitle">Convierte valores entre diferentes criptomonedas</string>
+    <string name="from_label">Desde:</string>
+    <string name="to_label">A:</string>
+    <string name="amount_hint">Cantidad</string>
+    <string name="calculate">Calcular</string>
+    <string name="result_label">Resultado:</string>
+    <string name="error_invalid_number">Por favor, introduce un número válido</string>
+    <string name="error_empty_amount">Por favor, introduce una cantidad</string>
+    <string name="error_select_coins">Por favor, selecciona monedas para la conversión</string>
+    <string name="error_price_unavailable">Información de precio no disponible</string>
+</resources> 

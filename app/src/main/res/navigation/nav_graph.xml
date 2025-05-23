@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_discover">
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="com.example.cryptick.ui.discover.DiscoverFragment"
+        android:label="Discover" />
+
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.example.cryptick.ui.favorites.FavoritesFragment"
+        android:label="Favorites" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.cryptick.ui.profile.ProfileFragment"
+        android:label="Profile" />
+
+</navigation> 

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cryptick</string>
+    
+    <!-- Navigation -->
+    <string name="title_discover">Discover</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_calculator">Calculator</string>
+
+    <!-- Discover Fragment -->
+    <string name="top_cryptos">Top cryptos by market cap</string>
+    <string name="refresh">Refresh</string>
+
+    <!-- Favorites Fragment -->
+    <string name="favorite_cryptos">Favorite cryptos</string>
+    <string name="no_favorites">No favorite cryptos yet</string>
+
+    <!-- Profile Fragment -->
+    <string name="general_settings">General Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language">Language</string>
+    <string name="information">Information</string>
+    <string name="about_app">About App</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="share_app">Share App</string>
+    <string name="logout">LOG OUT</string>
+    <string name="logout_confirmation">Are you sure you want to log out?</string>
+    <string name="cancel">Cancel</string>
+    <string name="share_message">Check out Cryptick, the best crypto tracking app!</string>
+    <string name="select_language">Select Language</string>
+    <string name="english">English</string>
+    <string name="spanish">Español</string>
+    <string name="virtual_agent">Mi Agente</string>
+    <string name="coming_soon">Próximamente: Tu asistente virtual de inversión</string>
+    <string name="ask_agent">Preguntar al agente</string>
+    <string name="type_message">Escribe tu pregunta sobre inversión…</string>
+    <string name="send">Enviar</string>
+    <string name="agent_welcome">¡Hola! Soy tu asistente virtual de inversión. ¿En qué puedo ayudarte?</string>
+    <string name="agent_thinking">Pensando…</string>
+
+    <!-- Coin Details Dialog -->
+    <string name="market_cap">Market Cap</string>
+    <string name="market_cap_rank">Market Cap Rank</string>
+    <string name="volume_24h">24h Volume</string>
+    <string name="high_24h">24h High</string>
+    <string name="low_24h">24h Low</string>
+    <string name="circulating_supply">Circulating Supply</string>
+    <string name="max_supply">Max Supply</string>
+    <string name="all_time_high">All Time High</string>
+    <string name="all_time_low">All Time Low</string>
+    <string name="close">Close</string>
+
+    <!-- About Dialog -->
+    <string name="project_module">Project Module</string>
+    <string name="developer_name">Christian Ciuca\nArangoya</string>
+    <string name="about_title">About</string>
+    <string name="about_description">This application is the final project module of the DAM degree. It is a mix and practical implementation of everything learned throughout the course, aimed at demonstrating the student\'s competencies.</string>
+    <string name="main_technologies">Main technologies</string>
+
+    <!-- Terms and Conditions -->
+    <string name="terms_last_updated">Last updated: [Date]</string>
+    <string name="terms_content">Welcome to Cryptick! This app was developed as part of a final project for the DAM (Development of Multiplatform Applications) degree.\n\n
+1. Introduction\nPlease read these Terms and Conditions carefully before using the application.\n\n
+2. Educational Purpose\nCryptick is a student project developed for educational purposes. It demonstrates the practical implementation of technologies learned throughout the course and is not intended for commercial use or distribution.\n\n
+3. User Data\nCryptick may collect and store certain data provided by users through Firebase and other third-party services. By using this app, you agree to the use of information in accordance with these terms.\n\n
+4. Intellectual Property\nAll content, including code and design, is the intellectual property of Christian Ciuca Arangoya, unless otherwise stated. The use of third-party libraries or frameworks is subject to their respective licenses.\n\n
+5. Limitation of Liability\nCryptick is provided "AS IS" without warranties of any kind. The developer is not responsible for any loss or damage resulting from the use or inability to use the app.\n\n
+6. Contact\nFor any questions or concerns about these terms, please contact: [Insert your email address or other contact information].\n\n
+7. Changes\nThese Terms and Conditions may be updated in the future. Changes will be communicated within the app through other appropriate channels.</string>
+
+    <!-- Privacy Policy -->
+    <string name="privacy_last_updated">Last updated: [Date]</string>
+    <string name="privacy_content">This Privacy Policy describes how Cryptick collects, uses, and protects your information when you use the application.\n\n
+1. Purpose of the App\nCryptick is a mobile application developed as a final project for the DAM (Development of Multiplatform Applications) degree. It is designed for educational and demonstration purposes only.\n\n
+2. Information We Collect\nCryptick may collect the following types of information:\n\n
+Personal Data (if applicable): such as your email or username if you sign in using Firebase Authentication.\n\n
+Usage Data: such as the date and time of your activity in the app.\n\n
+Device Information: such as device type or OS version (collected anonymously via Firebase).\n\n
+This information is used only to provide core app functionalities.\n\n
+3. How We Use Your Information\nAny data collected is used solely for:\n\n
+• Enabling basic app features (e.g., authentication, user storage).\n\n
+• Improving the reliability and performance of the app.\n\n
+• Debugging or fixing issues during development.\n\n
+Your data is not sold, shared, or used for marketing purposes.\n\n
+4. Third-Party Services\nCryptick uses Firebase by Google for authentication and database services. Firebase may collect information as described in their privacy policy.\n\n
+5. Data Security\nWe are committed to keeping your data secure. While this is a student project and not a production app, all reasonable efforts are made to follow secure practices using Firebase services.\n\n
+6. Children\'s Privacy\nCryptick is not intended for children under the age of 13. No data is knowingly collected from children.\n\n
+7. Changes to This Policy\nThis Privacy Policy may be updated from time to time. If changes are made, they will be reflected in this document with an updated "last updated" date.\n\n
+8. Contact\nIf you have any questions about this Privacy Policy, please contact: ciucaandreic@gmail.com</string>
+
+    <string name="search_hint">Buscar criptomonedas...</string>
+    
+    <!-- Coin Details Dialog Sections -->
+    <string name="market_information">Market Information</string>
+    <string name="price_range_24h">Price Range (24h)</string>
+    <string name="supply_information">Supply Information</string>
+    <string name="historical_records">Historical Records</string>
+    <string name="of_max_supply">%1$d%% of max supply</string>
+
+    <!-- Calculator Fragment -->
+    <string name="calculator_title">Cryptocurrency Converter</string>
+    <string name="calculator_subtitle">Convert value between different cryptocurrencies</string>
+    <string name="from_label">From:</string>
+    <string name="to_label">To:</string>
+    <string name="amount_hint">Amount</string>
+    <string name="calculate">Calculate</string>
+    <string name="result_label">Result:</string>
+    <string name="error_invalid_number">Please enter a valid number</string>
+    <string name="error_empty_amount">Please enter an amount</string>
+    <string name="error_select_coins">Please select coins for conversion</string>
+    <string name="error_price_unavailable">Price information not available</string>
+</resources>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:colorBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@color/purple_500">
+
+                <ImageView
+                    android:id="@+id/ivCoin"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_profile_placeholder" />
+
+                <TextView
+                    android:id="@+id/tvSymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivCoin"
+                    app:layout_constraintTop_toTopOf="@id/ivCoin"
+                    tools:text="BTC" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:alpha="0.8"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@id/tvSymbol"
+                    app:layout_constraintTop_toBottomOf="@id/tvSymbol"
+                    tools:text="Bitcoin" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="$50,000.00" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPrice">
+
+                    <ImageView
+                        android:id="@+id/ivPriceChangeIcon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="4dp"
+                        tools:src="@drawable/ic_trend_up"
+                        tools:tint="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tvPriceChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        tools:text="+5.67%" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Market Info Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/marketCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@id/headerCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/marketInfoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_information"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/marketDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/marketInfoTitle" />
+
+                <!-- Market Cap Row -->
+                <ImageView
+                    android:id="@+id/ivMarketCap"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_trending_up"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/marketDivider"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/tvMarketCapTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/market_cap"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivMarketCap"
+                    app:layout_constraintTop_toTopOf="@id/ivMarketCap"
+                    app:layout_constraintBottom_toBottomOf="@id/ivMarketCap" />
+
+                <TextView
+                    android:id="@+id/tvMarketCap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvMarketCapTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvMarketCapTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/tvMarketCapTitle"
+                    tools:text="$1,000,000,000" />
+
+                <!-- Rank Row -->
+                <ImageView
+                    android:id="@+id/ivRank"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_trending_up"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivMarketCap"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/tvRankTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/market_cap_rank"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivRank"
+                    app:layout_constraintTop_toTopOf="@id/ivRank"
+                    app:layout_constraintBottom_toBottomOf="@id/ivRank" />
+
+                <TextView
+                    android:id="@+id/tvRank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvRankTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvRankTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/tvRankTitle"
+                    tools:text="#1" />
+
+                <!-- 24h Volume Row -->
+                <ImageView
+                    android:id="@+id/iv24hVolume"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_trending_up"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivRank"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/tv24hVolumeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/volume_24h"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv24hVolume"
+                    app:layout_constraintTop_toTopOf="@id/iv24hVolume"
+                    app:layout_constraintBottom_toBottomOf="@id/iv24hVolume" />
+
+                <TextView
+                    android:id="@+id/tv24hVolume"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv24hVolumeTitle"
+                    app:layout_constraintTop_toTopOf="@id/tv24hVolumeTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/tv24hVolumeTitle"
+                    tools:text="$50,000,000,000" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Price Range Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/priceRangeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@id/marketCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/priceRangeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_range_24h"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/priceRangeDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/priceRangeTitle" />
+
+                <!-- Visual Price Range Bar -->
+                <TextView
+                    android:id="@+id/tv24hLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/red"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/priceRangeDivider"
+                    tools:text="$48,000.00" />
+
+                <TextView
+                    android:id="@+id/tv24hHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv24hLow"
+                    tools:text="$52,000.00" />
+
+                <View
+                    android:id="@+id/priceRangeBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_trend_up"
+                    app:layout_constraintTop_toBottomOf="@id/tv24hLow" />
+
+                <TextView
+                    android:id="@+id/tv24hLowTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/low_24h"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/priceRangeBar" />
+
+                <TextView
+                    android:id="@+id/tv24hHighTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/high_24h"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/priceRangeBar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Supply Information -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/supplyCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@id/priceRangeCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/supplyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/supply_information"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/supplyDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/supplyTitle" />
+
+                <!-- Circulating Supply Row -->
+                <ImageView
+                    android:id="@+id/ivCirculatingSupply"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_trending_up"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/supplyDivider"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/tvCirculatingSupplyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/circulating_supply"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivCirculatingSupply"
+                    app:layout_constraintTop_toTopOf="@id/ivCirculatingSupply"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCirculatingSupply" />
+
+                <TextView
+                    android:id="@+id/tvCirculatingSupply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvCirculatingSupplyTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvCirculatingSupplyTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/tvCirculatingSupplyTitle"
+                    tools:text="19,000,000 BTC" />
+
+                <!-- Max Supply Row -->
+                <ImageView
+                    android:id="@+id/ivMaxSupply"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_trending_up"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivCirculatingSupply"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/tvMaxSupplyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/max_supply"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivMaxSupply"
+                    app:layout_constraintTop_toTopOf="@id/ivMaxSupply"
+                    app:layout_constraintBottom_toBottomOf="@id/ivMaxSupply" />
+
+                <TextView
+                    android:id="@+id/tvMaxSupply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvMaxSupplyTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvMaxSupplyTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/tvMaxSupplyTitle"
+                    tools:text="21,000,000 BTC" />
+
+                <!-- Progress Bar showing circulating vs max supply -->
+                <ProgressBar
+                    android:id="@+id/supplyProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:progress="90"
+                    android:progressTint="@color/green"
+                    app:layout_constraintTop_toBottomOf="@id/ivMaxSupply" />
+
+                <TextView
+                    android:id="@+id/tvSupplyPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="90% of max supply"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/supplyProgressBar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- All time high/low information -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/recordsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@id/supplyCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/recordsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/historical_records"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/recordsDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/recordsTitle" />
+
+                <!-- ATH -->
+                <ImageView
+                    android:id="@+id/ivAth"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_trend_up"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recordsDivider"
+                    app:tint="@color/green" />
+
+                <TextView
+                    android:id="@+id/tvAthTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/all_time_high"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivAth"
+                    app:layout_constraintTop_toTopOf="@id/ivAth" />
+
+                <TextView
+                    android:id="@+id/tvAth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvAthTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvAthTitle"
+                    tools:text="$69,000.00" />
+
+                <TextView
+                    android:id="@+id/tvAthDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAthTitle"
+                    tools:text="Nov 10, 2021" />
+
+                <!-- ATL -->
+                <ImageView
+                    android:id="@+id/ivAtl"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_trend_down"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAthDate"
+                    app:tint="@color/red" />
+
+                <TextView
+                    android:id="@+id/tvAtlTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/all_time_low"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivAtl"
+                    app:layout_constraintTop_toTopOf="@id/ivAtl" />
+
+                <TextView
+                    android:id="@+id/tvAtl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvAtlTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvAtlTitle"
+                    tools:text="$67.81" />
+
+                <TextView
+                    android:id="@+id/tvAtlDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAtlTitle"
+                    tools:text="Jul 6, 2013" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Close Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/close"
+            app:cornerRadius="16dp"
+            app:layout_constraintTop_toBottomOf="@id/recordsCard" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView> 
